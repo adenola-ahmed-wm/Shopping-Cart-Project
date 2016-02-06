@@ -1,4 +1,20 @@
 
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "root";
+
+try {
+    $conn = new PDO("mysql:host=$servername;dbname=myproject2", $username, $password);
+    // set the PDO error mode to exception
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    echo "Connected successfully";
+}
+catch(PDOException $e)
+{
+    echo "Connection failed: " . $e->getMessage();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -46,7 +62,7 @@
     <tr>
         <th>
             <img class="pic11" src="http://s.tmocache.com/content/dam/tmo/en-p/cell-phones/apple-iphone-6s/rose-gold/stills/browse-apple-iphone-6s-rose-gold.jpg/_jcr_content/renditions/cq5dam.web.280.280.jpeg" width="200px" height="200px">
-            <p id="1">iPhone 6 Plus</p>
+            <p id="1">iPhone 6 plus</p>
             <button type="button" class="btn btn-success btn-sm"><span class="glyphicon glyphicon-shopping-cart"></span> Buy</button>
         </th>
         <th>

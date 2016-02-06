@@ -68,7 +68,7 @@
     height: 10px;
     width: 10px;
     border-radius: 5px;
-    background: darkred;
+    background: blue;
     z-index: 1;
     top: 13px;
     right: 15px;
@@ -156,7 +156,7 @@
     height: 0;
     top: 0;
     z-index: 0;
-    background: darkred;
+    background: red;
     -webkit-transition: height .2s;
     -moz-transition: height .2s;
     -ms-transition: height .2s;
