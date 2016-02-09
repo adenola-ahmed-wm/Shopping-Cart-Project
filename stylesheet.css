@@ -169,7 +169,7 @@
 #cssmenu > ul > li.has-sub > a:after {
     display: block;
     content: "";
-    background: #ffffff;
+    background: deepskyblue;
     height: 12px;
     width: 12px;
     position: absolute;
@@ -205,11 +205,11 @@
 }
 #cssmenu > ul > li:hover > a,
 #cssmenu > ul > li.active > a {
-    color: white;
+    color: steelblue;
 }
 #cssmenu > ul > li:hover > a:after,
 #cssmenu > ul > li.active > a:after {
-    background: #000000;
+    background: royalblue;
 }
 #cssmenu > ul > li:hover > a:before,
 #cssmenu > ul > li.active > a:before {
