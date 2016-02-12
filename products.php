@@ -13,7 +13,7 @@
 <body>
 <div style="z-index: 10" id='cssmenu'>
     <ul>
-        <li class="active"><a href='index.html'><span>Home</span></a></li>
+        <li class="active"><a href='index.php'><span>Home</span></a></li>
         <li><a href='#'><span>About</span></a>
             <ul>
                 <li class='has-sub'><a href=''><span>About Us</span></a></li>
@@ -21,7 +21,7 @@
                 <li class='has-sub'><a href=''><span>Frequently Asked Questions</span></a></li>
             </ul>
         </li>
-        <li><a href='products.html'><span>Products</span></a>
+        <li><a href='products.php'><span>Products</span></a>
             <ul>
                 <li class='has-sub'><a href='Phones.html'><span>Phones</span></a></li>
             </ul>
