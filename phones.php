@@ -119,5 +119,16 @@ catch(PDOException $e)
         </th>
     </tr>
 </table>
+<div>
+    <a href="/SimpleCart">Home</a>
+    <a href="/SimpleCart/login">Login</a>
+    <a href="/SimpleCart/register">Register</a>
+    <a href="/SimpleCart/cart">Cart</a>
+</div><br><br>
+<div>
+    <?php
+    getProducts($dbh);
+    ?>
+</div>
 </body>
 </html>
