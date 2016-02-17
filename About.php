@@ -33,7 +33,7 @@ echo "Connection failed: " . $e->getMessage();
         <li class="active"><a href='index.php'><span>Home</span></a></li>
         <li><a href='#'><span>About</span></a>
             <ul>
-                <li class='has-sub'><a href=''><span>About Us</span></a></li>
+                <li class='has-sub'><a href=''><span>About </span></a></li>
                 <li class='has-sub'><a href=''><span>Contact Info</span></a></li>
                 <li class='has-sub'><a href=''><span>Frequently Asked Questions</span></a></li>
             </ul>

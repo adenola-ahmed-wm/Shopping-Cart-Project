@@ -5,10 +5,10 @@ function getProducts($conn) {
     $stmt = $conn->prepare($sql);
 if ($stmt->execute()) {
 while ($row = $stmt->fetch()) {
-echo '<div>
+    echo '<div>
     Name: '.$row['name'].'<br>
     Price: $'.$row['price'].'<br>
-    <form method="post" action="/SimpleCart/cart/">
+    <form method="post" action="/">
         <input type="hidden" name="id" value="'.$row['id'].'"/>
         <input type="submit" name="add" value="ADD"/>
     </form>
@@ -32,7 +32,7 @@ echo '<div>
 <body>
 <div style="z-index: 10" id='cssmenu'>
     <ul>
-        <li class="active"><a href='index.html'><span>Home</span></a></li>
+        <li class="active"><a href='index.php'><span>Home</span></a></li>
         <li><a href='#'><span>About</span></a>
             <ul>
                 <li class='has-sub'><a href=''><span>About Us</span></a></li>
@@ -74,12 +74,7 @@ echo '<div>
     <img src="http://s.tmocache.com/content/dam/tmo/en-p/cell-phones/zte-avid-plus/all/stills/browse-zte-avid-plus-all.jpg/_jcr_content/renditions/cq5dam.web.280.280.jpeg" alt="" />
     <img src="http://s.tmocache.com/content/dam/tmo/en-p/cell-phones/blackberry-priv/all/stills/browse-blackberry-priv-all.jpg/_jcr_content/renditions/cq5dam.web.280.280.jpeg" alt="" />
 </div>
-<div>
-    <a href="/SimpleCart">Home</a>
-    <a href="/SimpleCart/login">Login</a>
-    <a href="/SimpleCart/register">Register</a>
-    <a href="/SimpleCart/cart">Cart</a>
-</div><br><br>
+<br><br>
 <div>
     <?php
         getProducts($dbh);
