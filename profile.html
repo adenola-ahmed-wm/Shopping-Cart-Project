@@ -28,19 +28,44 @@
         </li>
         <li><a href='#'><span>Cart</span></a>
             <ul>
-                <li class='has-sub'><a href=''><span>Checkout</span></a></li>
+                <li class='has-sub'><a href='Checkout.html'><span>Checkout</span></a></li>
             </ul>
         </li>
-        <li style="float: right;"><a href=''><span>Profile</span></a></li>
+        <li style="float: right;"><a href='products.html'><span>Profile</span></a></li>
     </ul>
 </div>
 <div id = bodyText>
     ​
 </div>
-<form action="profile.php" method="post">
-    Name: <input type="text" name="name"><br>
-    E-mail: <input type="text" name="email"><br>
-    <input type="submit">
+<form action="addemail.php" method="post">
+    <form method="post" action="addemail.php">
+        <label for="firstname">First name:</label>
+        <input type="text" id="firstname" name="firstname" /><br />
+        <label for="lastname">Last name:</label>
+        <input type="text" id="lastname" name="lastname" /><br />
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email" /><br />
+        <input type="submit" name="Submit" value="Submit" />
+    </form>
 </form>
+<?php
+
+  $dbc = mysqli_connect('data.makemeelvis.com', 'elmer', 'theking', 'elvis_store')
+    or die('Error connecting to MySQL server.');
+​
+  $first_name = $_POST['firstname'];
+  $last_name = $_POST['lastname'];
+  $email = $_POST['email'];
+​
+  $query = "INSERT INTO email_list (first_name, last_name, email)  VALUES ('$first_name', '$last_name', '$email')";
+  mysqli_query($dbc, $query)
+    or die('Error querying database.');
+​
+  echo 'Customer added.';
+​
+  mysqli_close($dbc);
+
+
+?>
 </body>
 </html>
